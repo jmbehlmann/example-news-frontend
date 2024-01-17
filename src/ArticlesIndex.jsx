@@ -24,8 +24,9 @@ export function ArticlesIndex() {
       <p>Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value) } list="titles" /></p>
       <button onClick={getArticles}>Get Articles</button>
       {articles.map((article) => (
-        <div key={article.title}>
+        <div key={article.url}>
           <p>Title: {article.title}</p>
+          <a href={article.url}>Go to article</a>
         </div>
       ))}
     </div>
